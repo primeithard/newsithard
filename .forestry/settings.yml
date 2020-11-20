@@ -3,7 +3,25 @@ new_page_extension: md
 auto_deploy: false
 admin_path: ''
 webhook_url: https://webhook.gatsbyjs.com/hooks/data_source/d7960226-f26a-4494-a78f-e1fabe58d122
-sections: 
+sections:
+- type: directory
+  path: content/authors
+  label: Authors
+  create: all
+  match: "**/_index.md"
+- type: heading
+  label: Data
+- type: directory
+  path: content/post
+  label: Post
+  create: all
+  match: "**/*"
+- type: document
+  path: content/_index.md
+  label: Home
+  match: "**/*"
+- type: heading
+  label: Content
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
